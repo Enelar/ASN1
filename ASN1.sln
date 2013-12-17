@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ASN1", "ASN1\ASN1.vcxproj", "{5F0D96D1-D3CC-47DE-B28E-14B9919B50D8}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AX", "AX\source\AX.vcxproj", "{792C27E3-863B-434C-A47A-F5F0515BFB20}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AX", "AX\AX.vcxproj", "{792C27E3-863B-434C-A47A-F5F0515BFB20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

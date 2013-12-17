@@ -29,6 +29,9 @@
     <Filter Include="source\builtin">
       <UniqueIdentifier>{b66959cf-0901-42e1-b0db-759a5d6fee37}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\out">
+      <UniqueIdentifier>{1a1d8b9e-b67b-4046-bb6f-15981c0cfb3a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="internal_header.h">
@@ -55,6 +58,12 @@
     </ClInclude>
     <ClInclude Include="base\entity\raw.h">
       <Filter>source\base\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="out\stream.h">
+      <Filter>source\out</Filter>
+    </ClInclude>
+    <ClInclude Include="asn1.h">
+      <Filter>source</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -78,6 +78,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="asn1.h" />
     <ClInclude Include="base\entity\entity.h" />
     <ClInclude Include="base\entity\raw.h" />
     <ClInclude Include="base\inditifier\inditifier.h" />
@@ -86,6 +87,7 @@
     <ClInclude Include="buildin\boolean.h" />
     <ClInclude Include="builtin\builtin.h" />
     <ClInclude Include="internal_header.h" />
+    <ClInclude Include="out\stream.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
@@ -97,7 +99,7 @@
     <ClCompile Include="internal_header.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AX\source\AX.vcxproj">
+    <ProjectReference Include="..\AX\AX.vcxproj">
       <Project>{792c27e3-863b-434c-a47a-f5f0515bfb20}</Project>
     </ProjectReference>
   </ItemGroup>
