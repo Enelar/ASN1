@@ -97,6 +97,7 @@
     <ClCompile Include="base\length\length.cpp" />
     <ClCompile Include="builtin\boolean.cpp" />
     <ClCompile Include="internal_header.cpp" />
+    <ClCompile Include="out\stream.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AX\AX.vcxproj">

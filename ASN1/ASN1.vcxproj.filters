@@ -85,5 +85,8 @@
     <ClCompile Include="base\entity\raw.cpp">
       <Filter>source\base\entity\src</Filter>
     </ClCompile>
+    <ClCompile Include="out\stream.cpp">
+      <Filter>source\out</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
