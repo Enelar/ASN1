@@ -43,9 +43,51 @@ stream &stream::operator<<(entity *element)
   return *this;
 }
 
-stream &stream::operator<<(const entity &element){  return (*this) << convert<string>(element);}stream &stream::operator<<(string parse){  return (*this) << NEW raw(parse);}stream &stream::operator=(const stream &orig){  if (this != &orig)    for each (const auto entity in orig.out)
-      (*this) << *entity;  return *this;}stream &stream::operator=(stream &&orig){  throw_assert(this != &orig);  // maybe wrong, and use out.swap(orig.out)
-  std::swap(out, orig.out);  return *this;}const vector<entity *> &stream::Parse() const{  todo(Parse from string);}stream &stream::operator>>(entity *&ent){  throw_sassert(!ent, "In case of possible errors please set pointer to null before call");  auto VectorCrapCodePopFront = [&]()  {    decltype(out) tvec;    std::swap(tvec, out);    std::copy(tvec.begin() + 1, tvec.end(), out.begin());    return tvec.front();  };  ent = VectorCrapCodePopFront();  return *this;}
+stream &stream::operator<<(const entity &element)
+{
+  return (*this) << convert<string>(element);
+}
+
+stream &stream::operator<<(const string &parse)
+{
+  return (*this) << NEW raw(parse);
+}
+
+stream &stream::operator=(const stream &orig)
+{
+  if (this != &orig)
+    for each (const auto entity in orig.out)
+      (*this) << *entity;
+  return *this;
+}
+
+stream &stream::operator=(stream &&orig)
+{
+  throw_assert(this != &orig);
+  // maybe wrong, and use out.swap(orig.out)
+  std::swap(out, orig.out);
+  return *this;
+}
+
+const vector<entity *> &stream::Parse() const
+{
+  todo(Parse from string);
+}
+
+stream &stream::operator>>(entity *&ent)
+{
+  throw_sassert(!ent, "In case of possible errors please set pointer to null before call");
+  auto VectorCrapCodePopFront = [&]()
+  {
+    decltype(out) tvec;
+    std::swap(tvec, out);
+    std::copy(tvec.begin() + 1, tvec.end(), out.begin());
+    return tvec.front();
+  };
+  ent = VectorCrapCodePopFront();
+  return *this;
+}
+
 stream::~stream()
 {
   for each (auto ent in out)

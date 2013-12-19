@@ -19,7 +19,7 @@ namespace asn1
 
     operator string() const;
     
-    stream &operator<<(entity *);    stream &operator<<(const entity &);    stream &operator<<(string);    stream &operator=(const stream &);    stream &operator=(stream &&);    const vector<entity *> &Parse() const;    stream &operator>>(entity *&);
+    stream &operator<<(entity *);    stream &operator<<(const entity &);    stream &operator<<(const string &);    stream &operator=(const stream &);    stream &operator=(stream &&);    const vector<entity *> &Parse() const;    stream &operator>>(entity *&);
     ~stream();
   };
 }
