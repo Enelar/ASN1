@@ -33,7 +33,7 @@ stream::operator string() const
 {
   std::stringstream stream;
 
-  for each (auto ent  in out)
+  for (auto ent : out)
     stream << convert<string>(*ent);
   return stream.str();
 }
@@ -57,7 +57,7 @@ stream &stream::operator<<(const string &parse)
 stream &stream::operator=(const stream &orig)
 {
   if (this != &orig)
-    for each (const auto entity in orig.out)
+    for (const auto entity : orig.out)
       (*this) << *entity;
   return *this;
 }
@@ -90,6 +90,6 @@ stream &stream::operator>>(entity *&ent)
 
 stream::~stream()
 {
-  for each (auto ent in out)
+  for (auto ent : out)
     delete ent;
 }

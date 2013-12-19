@@ -15,7 +15,7 @@ std::string length::EncodeLength(word length)
   auto ToString = [](const std::vector<ub> &a)
   {
     std::string t;
-    for each (ub ch in a)
+    for (ub ch : a)
       t.push_back(ch);
     return t;
   };
