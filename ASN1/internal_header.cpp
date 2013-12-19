@@ -16,9 +16,13 @@ std::string ConCat(std::string &a, const std::string &b)
 
 
 std::string Shift(std::string base, const word left, const word right)
-{ // maybe wrong
-  auto iter = std::rotate(base.begin(), base.begin() + left, base.end());
+{
   std::string ret;
-  std::copy(iter, base.end() - right, ret.begin());
+
+  word new_length = base.length() - right - left;
+  ret.reserve(new_length);
+
+  for (word i = 0; i < new_length; i++)
+    ret += base[i + left];
   return ret;
 }
