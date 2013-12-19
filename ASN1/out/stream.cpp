@@ -32,6 +32,7 @@ stream::stream(stream &&orig)
 stream::operator string() const
 {
   std::stringstream stream;
+
   for each (auto ent  in out)
     stream << convert<string>(*ent);
   return stream.str();
@@ -64,8 +65,7 @@ stream &stream::operator=(const stream &orig)
 stream &stream::operator=(stream &&orig)
 {
   throw_assert(this != &orig);
-  // maybe wrong, and use out.swap(orig.out)
-  std::swap(out, orig.out);
+  std::swap(out, orig.out); MAYBEWRONG // out.swap(orig.out)
   return *this;
 }
 
@@ -80,7 +80,7 @@ stream &stream::operator>>(entity *&ent)
   auto VectorCrapCodePopFront = [&]()
   {
     decltype(out) tvec;
-    std::swap(tvec, out);
+    std::swap(tvec, out); MAYBEWRONG // out.swap(orig.out)
     std::copy(tvec.begin() + 1, tvec.end(), out.begin());
     return tvec.front();
   };
