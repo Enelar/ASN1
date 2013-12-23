@@ -58,6 +58,9 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -100,7 +103,7 @@
     <ClCompile Include="out\stream.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AX\AX.vcxproj">
+    <ProjectReference Include="..\..\AX\AX.vcxproj">
       <Project>{792c27e3-863b-434c-a47a-f5f0515bfb20}</Project>
     </ProjectReference>
   </ItemGroup>
