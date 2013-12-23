@@ -1,5 +1,13 @@
 #include "inditifier.h"
 
+template<>
+std::string ax::convert(const ub &a)
+{
+  std::string ret;
+  ret += a;
+  return ret;
+}
+
 using namespace asn1;
 
 inditifier::inditifier(CLASS _type_class, bool _constructed, int _type_oid )
@@ -62,7 +70,7 @@ inditifier::operator std::string() const
   rb.is_constructed = is_constructed;
   throw_sassert(tag_number && tag_number < 31, "TODO: subsequent inditifier tag octets");
   rb.oid_if_simple_type = tag_number;
-  return std::to_string(rb);
+  return convert<std::string, ub>(rb);
 }
 
 int inditifier::OffsetToLength(const std::string &a)

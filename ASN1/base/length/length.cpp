@@ -33,9 +33,10 @@ std::string length::EncodeLength(word length)
   return ToString(t);
 }
 
-word length::DecodeLength(std::string)
+word length::DecodeLength(std::string str)
 {
-  todo(Decode Length);
+  throw_assert(!IsIndefinite(str));
+  return str[0];
 }
 
 word length::SizeofLength(const std::string &str)
