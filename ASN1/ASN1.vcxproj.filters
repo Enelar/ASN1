@@ -50,9 +50,6 @@
     <ClInclude Include="base\length\length.h">
       <Filter>source\base\length</Filter>
     </ClInclude>
-    <ClInclude Include="buildin\boolean.h">
-      <Filter>source\builtin</Filter>
-    </ClInclude>
     <ClInclude Include="builtin\builtin.h">
       <Filter>source\builtin</Filter>
     </ClInclude>
@@ -64,6 +61,12 @@
     </ClInclude>
     <ClInclude Include="asn1.h">
       <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="builtin\real.h">
+      <Filter>source\builtin</Filter>
+    </ClInclude>
+    <ClInclude Include="builtin\boolean.h">
+      <Filter>source\builtin</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +90,9 @@
     </ClCompile>
     <ClCompile Include="out\stream.cpp">
       <Filter>source\out</Filter>
+    </ClCompile>
+    <ClCompile Include="builtin\real.cpp">
+      <Filter>source\builtin</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

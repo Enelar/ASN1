@@ -14,7 +14,7 @@ namespace asn1
     bool is_constructed;
     int tag_number;
 
-    inditifier(CLASS, bool, int);
+    inditifier(CLASS, bool is_constructed, int tag_number);
     inditifier(int);
     inditifier(std::string);
     inditifier(const inditifier &) = default;

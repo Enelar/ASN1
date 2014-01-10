@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ASN1", "ASN1\ASN1.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AX", "AX\AX.vcxproj", "{792C27E3-863B-434C-A47A-F5F0515BFB20}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestASN1", "TestASN1\TestASN1.vcxproj", "{2A12917B-D1AF-455C-B6A7-29E84A80CB9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -21,6 +23,10 @@ Global
 		{792C27E3-863B-434C-A47A-F5F0515BFB20}.Debug|Win32.Build.0 = Debug|Win32
 		{792C27E3-863B-434C-A47A-F5F0515BFB20}.Release|Win32.ActiveCfg = Release|Win32
 		{792C27E3-863B-434C-A47A-F5F0515BFB20}.Release|Win32.Build.0 = Release|Win32
+		{2A12917B-D1AF-455C-B6A7-29E84A80CB9E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2A12917B-D1AF-455C-B6A7-29E84A80CB9E}.Debug|Win32.Build.0 = Debug|Win32
+		{2A12917B-D1AF-455C-B6A7-29E84A80CB9E}.Release|Win32.ActiveCfg = Release|Win32
+		{2A12917B-D1AF-455C-B6A7-29E84A80CB9E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

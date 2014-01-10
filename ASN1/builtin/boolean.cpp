@@ -11,7 +11,7 @@ boolean::operator std::string() const
   ConCat(ret, EncodeLength());
   entity::byte _content = 0;
   if (content)
-    _content = 0xFF; // as explained int ISO:IEC 8825-1:2003, page 18
+    _content = 0xFF; // as explained in ISO:IEC 8825-1:2003, page 18
   ConCat(ret, std::string({ (char)_content }));
   return ret;
 }
